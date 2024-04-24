@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+pbpaste | node index.mjs | pbcopy
+
