@@ -7,7 +7,7 @@ async function readAll(stream) {
 
 const input = await readAll(process.stdin);
 
-const output = input.replace( /\\u([a-f0-9]+)\b/g, (s,s0)=>{
+const output = input.replace( /\\u([a-fA-Z0-9]{4})/g, (s,s0)=>{
   return String.fromCharCode( Number.parseInt( s0,16 ) );
 })
 
