@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-pbpaste | node index.mjs | pbcopy
+DIR=`realpath "$BASH_SOURCE"`
+DIR=`dirname "$DIR" `
+DIR=`realpath "$DIR/.."`
+echo $DIR;
+
+pbpaste | node "$DIR/index.mjs" | pbcopy
 
