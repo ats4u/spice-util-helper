@@ -11,5 +11,5 @@ const output = input.replace( /\\u([a-fA-Z0-9]{4})/g, (s,s0)=>{
   return String.fromCharCode( Number.parseInt( s0,16 ) );
 })
 
-process.stdout.write( output );
+process.stdout.write( Buffer.from( output, 'utf-8' ) );
 

@@ -3,7 +3,6 @@
 DIR=`realpath "$BASH_SOURCE"`
 DIR=`dirname "$DIR" `
 DIR=`realpath "$DIR/.."`
-echo $DIR;
 
-pbpaste | node "$DIR/index.mjs" | pbcopy
+pbpaste | /usr/local/bin/node "$DIR/index.mjs" | LANG=en_US.UTF-8 pbcopy
 
